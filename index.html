@@ -5,40 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title></title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer async></script>
     <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Onzer</h1>
-      <!-- <iconify-icon icon="iconoir:menu" width="3em" height="3em"  style="color: white"></iconify-icon> -->
-    </nav>
-  </header>
-  <main>
-    <div class="title-container">
-      <h2 class="title"></h2>
-      <button id="like"><iconify-icon icon="icon-park-outline:like" width="3em" height="2.5em"  style="color: white"></iconify-icon></button>
-    </div>
-    <div class="controler">
-      <div class="bar">
-        <input type="range" id="bar" value="0">
-        <progress id="progress" value="0"></progress>
-      </div>
-      <div class="button">
-        <button id="random"><iconify-icon icon="lets-icons:sort-random" width="3em" height="3em"  style="color: rgba(255, 255, 255, 0.561)"></iconify-icon></button>
-        <button id="prev"><iconify-icon icon="tabler:player-track-prev-filled" width="3em" height="3em"  style="color: white"></iconify-icon></button>
-        <button id="play" class="play"><iconify-icon icon="ion:play" width="3em" height="3em"  style="color: white"></iconify-icon></button>
-        <button id="next"><iconify-icon icon="tabler:player-track-next-filled" width="3em" height="3em"  style="color: white"></iconify-icon></button>  
-        <button id="repeat"><iconify-icon icon="tabler:repeat" width="3em" height="3em"  style="color: rgba(255, 255, 255, 0.561)"></iconify-icon></button>
-      </div>
-    </div>
-    <div class="music-list">
-      <audio class="music" data-name="Rick Roll" src="/public/music.mp3"></audio>
-    <audio class="music" data-name="Around The World" src="/public/music2.mp3"></audio>
-    <audio class="music" data-name="Camé" src="/public/music3.mp3"></audio>
-    </div>
-  </main>
+    <header>
+        <nav>
+        <h1>Onzer</h1>
+        </nav>
+    </header>
+    <main>
+        <div class="title-container">
+        <h2 class="title"></h2>
+        <button id="like"><iconify-icon icon="icon-park-outline:like" width="3em" height="2.5em"  style="color: white"></iconify-icon></button>
+        </div>
+        <div class="controler">
+        <div class="bar">
+            <input type="range" id="bar" value="0">
+            <progress id="progress" value="0"></progress>
+        </div>
+        <div class="button">
+            <button id="random"><iconify-icon icon="lets-icons:sort-random" width="3em" height="3em"></iconify-icon></button>
+            <button id="prev"><iconify-icon icon="tabler:player-track-prev-filled" width="3em" height="3em"  style="color: white"></iconify-icon></button>
+            <button id="play" class="play"><iconify-icon icon="ion:play" width="3em" height="3em"  style="color: white"></iconify-icon></button>
+            <button id="next"><iconify-icon icon="tabler:player-track-next-filled" width="3em" height="3em"  style="color: white"></iconify-icon></button>  
+            <button id="repeat"><iconify-icon icon="tabler:repeat" width="3em" height="3em"></iconify-icon></button>
+        </div>
+        </div>
+        <div class="music-list">
+            <audio class="music" data-name="Rick Roll" src="/public/music.mp3"></audio>
+            <audio class="music" data-name="Around The World" src="/public/music2.mp3"></audio>
+            <audio class="music" data-name="Camé" src="/public/music3.mp3"></audio>
+            <audio class="music" data-name="French Song" src="/public/music4.mp3"></audio>
+            <audio class="music" data-name="Le président" src="/public/music5.mp3"></audio>
+        </div>
+    </main>
 </body>
 </html>
