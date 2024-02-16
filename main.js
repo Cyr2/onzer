@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         music[mI].play();
+        play.innerHTML = '<iconify-icon icon="carbon:pause-filled" width="3em" height="3em"  style="color: white"></iconify-icon>';
         title.textContent = music[mI].dataset.name;
         updateProgress();
     }
