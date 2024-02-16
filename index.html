@@ -17,16 +17,21 @@
     </nav>
   </header>
   <main>
-    <h2 class="title"></h2>
+    <div class="title-container">
+      <h2 class="title"></h2>
+      <button id="like"><iconify-icon icon="icon-park-outline:like" width="3em" height="2.5em"  style="color: white"></iconify-icon></button>
+    </div>
     <div class="controler">
       <div class="bar">
         <input type="range" id="bar" value="0">
         <progress id="progress" value="0"></progress>
       </div>
       <div class="button">
+        <button id="random"><iconify-icon icon="lets-icons:sort-random" width="3em" height="3em"  style="color: rgba(255, 255, 255, 0.561)"></iconify-icon></button>
         <button id="prev"><iconify-icon icon="tabler:player-track-prev-filled" width="3em" height="3em"  style="color: white"></iconify-icon></button>
         <button id="play" class="play"><iconify-icon icon="ion:play" width="3em" height="3em"  style="color: white"></iconify-icon></button>
         <button id="next"><iconify-icon icon="tabler:player-track-next-filled" width="3em" height="3em"  style="color: white"></iconify-icon></button>  
+        <button id="repeat"><iconify-icon icon="tabler:repeat" width="3em" height="3em"  style="color: rgba(255, 255, 255, 0.561)"></iconify-icon></button>
       </div>
     </div>
     <div class="music-list">

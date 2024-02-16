@@ -40,6 +40,17 @@ main {
   border-radius: 30px;
 }
 
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 5%;
+}
+
+.title {
+  font-size: 1.5rem;
+}
 
 progress {
   width: 40dvw; 
@@ -76,6 +87,14 @@ input[type=range]::-webkit-slider-thumb{
 
 }
 
+.button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
 .play {
   border: 2px solid white;
   padding: 0.5rem;
@@ -83,6 +102,7 @@ input[type=range]::-webkit-slider-thumb{
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .controler {
@@ -93,11 +113,4 @@ input[type=range]::-webkit-slider-thumb{
   background-color: #8a7de4;
   padding: 1rem 2rem;
   border-radius: 30px;
-}
-
-.button {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 1rem;
 }
