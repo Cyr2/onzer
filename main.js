@@ -99,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 progress.value = music[mI].currentTime;
                 input.value = music[mI].currentTime;
             }
+            if(music[mI].currentTime == music[mI].duration) {
+                nextMusic();
+            }
         });
     }
 });
