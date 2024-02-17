@@ -8,12 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let next = document.querySelector('#next');
     let aleaBtn = document.querySelector('#random');
     let repeatBtn = document.querySelector('#repeat');
+    let timer = document.querySelector('#timer');
+    let total = document.querySelector('#total')
     let mI = 0;
     let alea = false;
     let repeat = false;
     let interactingWithProgressBar = false;
+    title.textContent = music[mI].dataset.name;
 
-    title.textContent = music[mI].dataset.name
+    window.addEventListener('load',()=>{
+        total.textContent = formatTime(music[mI].duration);
+        progress.setAttribute('max', music[mI].duration);
+        input.setAttribute('max', music[mI].duration);
+    })
 
     play.addEventListener('click', () => {
         if (music[mI].paused) {
@@ -89,13 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
         music[mI].play();
         play.innerHTML = '<iconify-icon icon="carbon:pause-filled" width="3em" height="3em"  style="color: white"></iconify-icon>';
         title.textContent = music[mI].dataset.name;
+        total.textContent = formatTime(music[mI].duration);
         updateProgress();
     }
 
     function updateProgress() {
-        progress.setAttribute('max', music[mI].duration);
-        input.setAttribute('max', music[mI].duration);
         music[mI].addEventListener('timeupdate', () => {
+            timer.textContent = formatTime(music[mI].currentTime);
             if (!interactingWithProgressBar) {
                 progress.value = music[mI].currentTime;
                 input.value = music[mI].currentTime;
@@ -106,3 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function formatTime(time){
+    minutes = Math.floor(time / 60);
+    seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+}
